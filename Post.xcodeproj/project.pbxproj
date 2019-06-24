@@ -14,6 +14,7 @@
 		85CA548522C162E00058A8CC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 85CA548422C162E00058A8CC /* Assets.xcassets */; };
 		85CA548822C162E00058A8CC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85CA548622C162E00058A8CC /* LaunchScreen.storyboard */; };
 		85CA549722C165160058A8CC /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85CA549622C165160058A8CC /* Post.swift */; };
+		85CA549922C168520058A8CC /* PostController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85CA549822C168520058A8CC /* PostController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		85CA548722C162E00058A8CC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		85CA548922C162E00058A8CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		85CA549622C165160058A8CC /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		85CA549822C168520058A8CC /* PostController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +99,7 @@
 		85CA549322C163F80058A8CC /* Model Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				85CA549822C168520058A8CC /* PostController.swift */,
 			);
 			path = "Model Controllers";
 			sourceTree = "<group>";
@@ -189,6 +192,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				85CA549922C168520058A8CC /* PostController.swift in Sources */,
 				85CA547D22C162DE0058A8CC /* ViewController.swift in Sources */,
 				85CA547B22C162DE0058A8CC /* AppDelegate.swift in Sources */,
 				85CA548322C162DE0058A8CC /* Post.xcdatamodeld in Sources */,
@@ -340,7 +344,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = YY8J3FPYX8;
-				INFOPLIST_FILE = Post/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Post/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -358,7 +362,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = YY8J3FPYX8;
-				INFOPLIST_FILE = Post/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Post/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
