@@ -8,19 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		85CA547B22C162DE0058A8CC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85CA547A22C162DE0058A8CC /* AppDelegate.swift */; };
-		85CA547D22C162DE0058A8CC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85CA547C22C162DE0058A8CC /* ViewController.swift */; };
 		85CA548022C162DE0058A8CC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85CA547E22C162DE0058A8CC /* Main.storyboard */; };
 		85CA548322C162DE0058A8CC /* Post.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 85CA548122C162DE0058A8CC /* Post.xcdatamodeld */; };
 		85CA548522C162E00058A8CC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 85CA548422C162E00058A8CC /* Assets.xcassets */; };
 		85CA548822C162E00058A8CC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85CA548622C162E00058A8CC /* LaunchScreen.storyboard */; };
 		85CA549722C165160058A8CC /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85CA549622C165160058A8CC /* Post.swift */; };
 		85CA549922C168520058A8CC /* PostController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85CA549822C168520058A8CC /* PostController.swift */; };
+		85CA549D22C17DB00058A8CC /* PostListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85CA549C22C17DB00058A8CC /* PostListViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		85CA547722C162DE0058A8CC /* Post.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Post.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		85CA547A22C162DE0058A8CC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		85CA547C22C162DE0058A8CC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		85CA547F22C162DE0058A8CC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		85CA548222C162DE0058A8CC /* Post.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Post.xcdatamodel; sourceTree = "<group>"; };
 		85CA548422C162E00058A8CC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -28,6 +27,7 @@
 		85CA548922C162E00058A8CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		85CA549622C165160058A8CC /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		85CA549822C168520058A8CC /* PostController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostController.swift; sourceTree = "<group>"; };
+		85CA549C22C17DB00058A8CC /* PostListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,7 +82,7 @@
 		85CA549022C163D50058A8CC /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				85CA547C22C162DE0058A8CC /* ViewController.swift */,
+				85CA549C22C17DB00058A8CC /* PostListViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -193,7 +193,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				85CA549922C168520058A8CC /* PostController.swift in Sources */,
-				85CA547D22C162DE0058A8CC /* ViewController.swift in Sources */,
+				85CA549D22C17DB00058A8CC /* PostListViewController.swift in Sources */,
 				85CA547B22C162DE0058A8CC /* AppDelegate.swift in Sources */,
 				85CA548322C162DE0058A8CC /* Post.xcdatamodeld in Sources */,
 				85CA549722C165160058A8CC /* Post.swift in Sources */,
