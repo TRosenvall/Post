@@ -28,6 +28,12 @@ class PostListViewController: UIViewController, UITableViewDelegate, UITableView
         tableViewOutlet.refreshControl = refreshControl
     }
     
+    @IBAction func addButtonTapped(_ sender: Any) {
+        presentNewPost()
+        PostController.sharedInstance.fetchPosts {
+        }
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return PostController.sharedInstance.posts.count
     }
@@ -41,7 +47,7 @@ class PostListViewController: UIViewController, UITableViewDelegate, UITableView
     }
     
     @objc func refreshControlPulled() {
-        PostController.sharedInstance.fetchPosts {
+        PostController.sharedInstance.fetchPosts() {
             DispatchQueue.main.async {
                 self.reloadTableViews()
                 self.refreshControl.endRefreshing()
@@ -50,21 +56,41 @@ class PostListViewController: UIViewController, UITableViewDelegate, UITableView
         }
     }
 
-    func reloadTableViews () {
+    func reloadTableViews() {
         DispatchQueue.main.async {
             self.tableViewOutlet.reloadData()
             UIApplication.shared.isNetworkActivityIndicatorVisible = true
         }
     }
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func presentNewPost() {
+        let alertController = UIAlertController(title: "New Post", message: "Post a new message", preferredStyle: .alert)
+        alertController.addTextField{ (textField) in textField.placeholder = "Username..." }
+        alertController.addTextField{ (textField) in textField.placeholder = "Message..." }
+        let addItemAction = UIAlertAction(title: "Add", style: .default) { (_) in guard let usernameText = alertController.textFields?.first?.text, let messageText = alertController.textFields?.last?.text else {return}
+            PostController.sharedInstance.addNewPostWith(username: usernameText, text: messageText, completion: {
+                DispatchQueue.main.async {
+                    self.tableViewOutlet.reloadData()
+                }
+            })
+        }
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
+        
+        alertController.addAction(addItemAction)
+        alertController.addAction(cancelAction)
+        
+        present(alertController, animated: true, completion: nil)
     }
-    */
+}
 
+extension PostListViewController {
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        if indexPath.row >= PostController.sharedInstance.posts.count - 1 {
+            PostController.sharedInstance.fetchPosts(reset: false) {
+                DispatchQueue.main.async {
+                    self.tableViewOutlet.reloadData()
+                }
+            }
+        }
+    }
 }
