@@ -12,6 +12,9 @@ struct Post: Codable {
     let text: String
     let timestamp: TimeInterval
     let username: String
+    var queryTimestamp: TimeInterval {
+        return Date().timeIntervalSince1970 - 0.00001
+    }
     
     init(text: String, timestamp: TimeInterval = Date().timeIntervalSince1970, username: String) {
         self.text = text
